@@ -5,7 +5,7 @@
   "name": "glitch-secure-json-edit",
   "version": "0.0.1",
   "description": "edit json files on the server",
-  "main": "server.js",
+  "main": "server/glitch-secure-json-edit.js",
   "scripts": {
     "start": "node server.js"
   },
