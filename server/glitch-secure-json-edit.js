@@ -6,7 +6,7 @@ const applyHysteresis = require(path.join(path.dirname(require.resolve("json-edi
 function secureJSONEditor(app,express,filename,displayName,template,route,theme) {
    let obj;
   try {
-    obj = secureJSON.parse(fs.readFileSync(filename,'utf8'));
+    obj = secureJSONEditor.JSON.parse(fs.readFileSync(filename,'utf8'));
   } catch (e) {
     obj = JSON.parse(JSON.stringify(template));
   }
@@ -28,7 +28,7 @@ function secureJSONEditor(app,express,filename,displayName,template,route,theme)
    editor.addEventListener("change",applyHysteresis(function(e){
      let obj = e.current;
      editor.emit("save",{fs:path.basename(filename)});
-     fs.writeFile(filename,secureJSON.stringify(obj), function(){
+     fs.writeFile(filename,secureJSONEditor.JSON.stringify(obj), function(){
         editor.emit("save",{done:editor.current});
      });
    },1000,function(e){
@@ -44,5 +44,6 @@ function secureJSONEditor(app,express,filename,displayName,template,route,theme)
 
    return editor;
 }
+secureJSONEditor.JSON = secureJSON;
 
 module.exports = secureJSONEditor;
