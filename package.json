@@ -1,14 +1,8 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
   "name": "glitch-secure-json-edit",
   "version": "0.0.1",
   "description": "edit json files on the server",
   "main": "server/glitch-secure-json-edit.js",
-  "scripts": {
-    "start": "node server.js"
-  },
   "dependencies": {
     "glitch-secure-json": "github:jonathan-annett/glitch-secure-json#c53d4300dd71c41d74d50440b31f25f45d3d42cf",
     "json-edit": "github:jonathan-annett/json-edit#7e91d428986abf1f90ab2b606cf8355bdc82ac5c"
