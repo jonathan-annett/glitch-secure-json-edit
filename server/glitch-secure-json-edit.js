@@ -1,7 +1,7 @@
 const secureJSON = require("glitch-secure-json");
 const jsonEditor = require("json-edit");
 const fs = require('fs'),path = require('path');
-const applyHysteresis = require('../public/hysteresis.js').applyHysteresis;
+const applyHysteresis = require(path.join(path.dirname(require.resolve("json-edit")),'..','public','hysteresis.js').applyHysteresis;
 
 function secureJSONEditor(app,express,filename,displayName,template,route,theme) {
    let obj;
