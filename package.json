@@ -4,7 +4,7 @@
   "description": "edit json files on the server",
   "main": "server/glitch-secure-json-edit.js",
   "dependencies": {
-    "glitch-secure-json": "github:jonathan-annett/glitch-secure-json#fcc86bb1f761768a96eabaf05e27ff7712d002d5",
+    "glitch-secure-json": "github:jonathan-annett/glitch-secure-json#d68756c95724ec312bc9ba8b461e42063af396bc",
     "json-edit": "github:jonathan-annett/json-edit#45b6509c024e771eb00b8df887b7fba6a4207059"
   },
   "engines": {
