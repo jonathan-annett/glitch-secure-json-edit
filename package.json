@@ -5,7 +5,7 @@
   "main": "server/glitch-secure-json-edit.js",
   "dependencies": {
     "glitch-secure-json": "github:jonathan-annett/glitch-secure-json#c778bfe62e6773f7775b2753bd1be8f9b64ef9db",
-    "json-edit": "github:jonathan-annett/json-edit#45b6509c024e771eb00b8df887b7fba6a4207059"
+    "json-edit": "github:jonathan-annett/json-edit#c8e38b0e33279ec7f1c42dca0ed3e63ca1479639"
   },
   "engines": {
     "node": "12.x"
