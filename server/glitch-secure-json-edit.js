@@ -3,7 +3,7 @@ const jsonEditor = require("json-edit");
 const fs = require('fs'),path = require('path');
 const applyHysteresis = require(path.join(path.dirname(require.resolve("json-edit")),'..','public','hysteresis.js')).applyHysteresis;
 
-function secureJSONEditor(app,express,filename,displayName,template,route,theme) {
+function secureJSONEditor(app,express,server,filename,displayName,template,route,theme) {
    let obj;
   try {
     obj = secureJSONEditor.JSON.parse(fs.readFileSync(filename,'utf8'));
@@ -22,7 +22,7 @@ function secureJSONEditor(app,express,filename,displayName,template,route,theme)
        theme='cobalt';
      }
    }
-   const editor = jsonEditor(app, express, obj, displayName, template, route, theme) ;  
+   const editor = jsonEditor(app, express, server,  obj, displayName, template, route, theme) ;  
   
   
    editor.addEventListener("change",applyHysteresis(function(e){
